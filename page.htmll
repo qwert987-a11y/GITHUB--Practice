@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10110f">
+  <title>Jonshi R. Patel — The Art of Becoming</title>
+  <style>
+    :root {
+      --bg: #10110f;
+      --text: #f4f1e8;
+      --muted: #aaa99f;
+      --lime: #c9f27a;
+      --line: rgba(244,241,232,.15);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(ellipse at 80% 8%, rgba(112,137,67,.20), transparent 32rem),
+        radial-gradient(ellipse at 5% 60%, rgba(95,83,61,.15), transparent 30rem),
+        var(--bg);
+      color: var(--text);
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1100px, calc(100% - 44px)); margin: auto; }
+    nav {
+      height: 78px; display: flex; align-items: center;
+      justify-content: space-between; border-bottom: 1px solid var(--line);
+    }
+    .logo { font-weight: 800; letter-spacing: .12em; }
+    .logo span { color: var(--lime); }
+    .navlinks { display: flex; gap: 25px; color: var(--muted); font-size: .88rem; }
+    .navlinks a:hover { color: var(--lime); }
+    .hero { min-height: 690px; display: flex; flex-direction: column; justify-content: center; padding: 95px 0 110px; }
+    .eyebrow { color: var(--lime); text-transform: uppercase; letter-spacing: .22em; font-size: .75rem; font-weight: 700; }
+    h1 { font-size: clamp(3.5rem, 10vw, 8.2rem); line-height: .91; letter-spacing: -.075em; margin: 25px 0; max-width: 950px; }
+    h1 span { color: var(--lime); }
+    .subtitle { font-size: clamp(1.1rem, 2.5vw, 1.5rem); color: #d4d1c7; max-width: 620px; line-height: 1.55; }
+    .hero-bottom { display: flex; align-items: center; gap: 18px; margin-top: 35px; flex-wrap: wrap; }
+    .button {
+      display: inline-block; padding: 14px 21px; border-radius: 3px;
+      background: var(--lime); color: #171a12; font-weight: 800; font-size: .9rem;
+      border: 1px solid var(--lime); cursor: pointer;
+    }
+    .button:hover { background: transparent; color: var(--lime); }
+    .quiet-link { color: var(--muted); font-size: .9rem; }
+    .quiet-link:hover { color: var(--text); }
+    .scroll-note { margin-top: 70px; color: var(--muted); font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; }
+    section { padding: 90px 0; border-top: 1px solid var(--line); }
+    .section-label { color: var(--lime); font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; font-weight: 800; }
+    h2 { font-size: clamp(2.1rem, 5vw, 4rem); letter-spacing: -.055em; margin: 18px 0 25px; }
+    .intro { color: var(--muted); max-width: 650px; line-height: 1.8; font-size: 1.05rem; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 42px; }
+    .tile { min-height: 205px; padding: 25px; border: 1px solid var(--line); background: rgba(255,255,255,.025); }
+    .tile .number { color: var(--lime); font-size: .78rem; letter-spacing: .12em; }
+    .tile h3 { font-size: 1.35rem; margin: 35px 0 10px; }
+    .tile p { color: var(--muted); line-height: 1.6; margin: 0; font-size: .93rem; }
+    .quote {
+      margin-top: 35px; padding: 30px; border-left: 2px solid var(--lime);
+      background: rgba(255,255,255,.035); max-width: 760px;
+    }
+    .quote p { font-size: clamp(1.25rem, 3vw, 2rem); line-height: 1.4; margin: 0; letter-spacing: -.025em; }
+    .quote small { display: block; color: var(--muted); margin-top: 18px; letter-spacing: .12em; text-transform: uppercase; }
+    .spark-box { display: flex; align-items: center; justify-content: space-between; gap: 25px; flex-wrap: wrap; margin-top: 35px; padding: 25px; border: 1px solid var(--line); }
+    #spark { color: #dedbd1; line-height: 1.6; max-width: 600px; margin: 0; }
+    footer { padding: 30px 0 45px; color: var(--muted); display: flex; justify-content: space-between; gap: 15px; flex-wrap: wrap; font-size: .82rem; }
+    @media (max-width: 700px) {
+      .navlinks { gap: 12px; font-size: .76rem; }
+      .hero { min-height: 610px; padding: 80px 0; }
+      .grid { grid-template-columns: 1fr; }
+      section { padding: 70px 0; }
+    }
+    @media (max-width: 420px) {
+      .navlinks a:nth-child(2) { display: none; }
+      .wrap { width: min(100% - 30px, 1100px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <a class="logo" href="#top">JCP<span>.</span></a>
+      <div class="navlinks">
+        <a href="#about">ABOUT</a>
+        <a href="#philosophy">PHILOSOPHY</a>
+        <a href="#journey">JOURNEY</a>
+      </div>
+    </nav>
+
+    <main id="top">
+      <header class="hero">
+        <div class="eyebrow">A work in progress · A life in motion</div>
+        <h1>JOHN C.<br><span>PATEL.</span></h1>
+        <p class="subtitle">Exploring life. Chasing ideas. Creating possibilities. Not here to follow a script — here to write my own.</p>
+        <div class="hero-bottom">
+          <a class="button" href="#about">ENTER MY WORLD ↘</a>
+          <a class="quiet-link" href="#philosophy">A little about how I think</a>
+        </div>
+        <div class="scroll-note">↓ Keep exploring</div>
+      </header>
+
+      <section id="about">
+        <div class="section-label">01 / The person behind the initials</div>
+        <h2>Curious by nature.<br>Limitless by choice.</h2>
+        <p class="intro">I’m someone who wants to experience more than the ordinary. I want to learn new things, ask better questions, take on challenges, build ideas, make mistakes, and turn every experience into a lesson. This is not a finished story. It’s the beginning of one.</p>
+      </section>
+
+      <section id="philosophy">
+        <div class="section-label">02 / A few things I believe</div>
+        <h2>My operating system.</h2>
+        <div class="grid">
+          <article class="tile">
+            <div class="number">01 — EXPLORE</div>
+            <h3>Stay curious.</h3>
+            <p>There is always something new to discover. Step outside what you already know.</p>
+          </article>
+          <article class="tile">
+            <div class="number">02 — CREATE</div>
+            <h3>Make things real.</h3>
+            <p>Ideas are only the beginning. Experiment, build, try again, and bring them to life.</p>
+          </article>
+          <article class="tile">
+            <div class="number">03 — BECOME</div>
+            <h3>Keep evolving.</h3>
+            <p>Progress over perfection. Let every challenge shape a stronger, wiser version of you.</p>
+          </article>
+        </div>
+        <div class="quote">
+          <p>“I don't need to have my whole life figured out. I just need the courage to keep exploring.”</p>
+          <small>— My reminder to myself</small>
+        </div>
+      </section>
+
+      <section id="journey">
+        <div class="section-label">03 / The journey</div>
+        <h2>Still becoming.</h2>
+        <p class="intro">Every skill learned, every place explored, every project started, every failure survived — all of it belongs to the journey. The goal isn't to look impressive. The goal is to live a life that feels meaningful.</p>
+        <div class="spark-box">
+          <p id="spark">Need a little push? Generate a reminder for today.</p>
+          <button class="button" type="button" onclick="newSpark()">GIVE ME A SPARK ✦</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>© <span id="year"></span> JOHN C. PATEL</span>
+      <span>THE ART OF BECOMING.</span>
+    </footer>
+  </div>
+  <script>
+    const sparks = [
+      "Start before you're ready. Clarity often comes from action.",
+      "Be interested in everything. You never know what will inspire your next idea.",
+      "Your life is not a race. Make it an adventure worth remembering.",
+      "Build something. Learn something. Experience something.",
+      "Don't let the fear of being a beginner stop you from becoming great.",
+      "Stay passionate, stay humble, and keep moving."
+    ];
+    function newSpark() {
+      const current = document.getElementById("spark").textContent;
+      let next = sparks[Math.floor(Math.random() * sparks.length)];
+      while (sparks.length > 1 && next === current) {
+        next = sparks[Math.floor(Math.random() * sparks.length)];
+      }
+      document.getElementById("spark").textContent = next;
+    }
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
